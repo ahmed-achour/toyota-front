@@ -1,1 +1,90 @@
-<p>car-list works!</p>
+<div class="sb-nav-fixed">
+    <app-top-bar></app-top-bar>
+  
+    <div id="layoutSidenav">
+      <app-side-bar></app-side-bar>
+  
+      <!-- CONTENT-->
+  
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid px-4">
+            <h2 style="color: black">car managment</h2>
+  
+            <div>
+              <button
+                type="button"
+                class="btn btn-primary mb-3"
+                data-toggle="modal"
+                data-target=".bd-example-modal-sm"
+                routerLink="/add-new-category">
+                + add
+              </button>
+  
+              <div
+                class="modal fade bd-example-modal-sm"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="mySmallModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">...</div>
+                </div>
+              </div>
+              <table class="fl-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>model</th>
+                    <th>qr_code</th>
+                    <th>price</th>
+                    <th>description</th>
+                    <th>edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let car of carList; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ car.model }}</td>
+                    <td>
+                      <img
+                        src="http://localhost:3000/{{ car.photo }}"
+                        class="image-fluid category-image"
+                        alt=""
+                      />
+                    </td>
+                    <td>{{ car.qr_code }}</td>
+                    <td>{{ car.price }}</td>
+                    <td>{{ car.description }}</td>
+                    <td>
+                      <button
+                        class="btn btn-warning mx-2"
+                        [routerLink]="['/modify-category', car._id]"
+                      >
+                        <i
+                          class="fa fa-pencil"
+                          style="color: white"
+                          aria-hidden="true"
+                        ></i></button
+                      ><button
+                        class="btn btn-danger mx-2"
+                        style="color: white"
+                        (click)="delete(car._id, i)"
+                      >
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+  
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+  

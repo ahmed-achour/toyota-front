@@ -1,0 +1,57 @@
+.car-bg{
+    background-image: url("../../../../assets/img/bg-car.png");
+    width: 100%;
+    background-size: cover;
+}
+.content{
+    height: 790px;
+    margin-top: 100px;
+    margin-left: 100px ;
+    table{
+        margin-left: 86px;
+        tr{
+            td{ 
+                height: 249px;
+                width: 295px;
+                
+            }
+        }
+            .imgs{
+                    background-color: rgb(131, 134, 134) ;
+                    img{
+                    height: 249px;
+                    width: 295px;
+                    }
+                }
+            .infos{
+                text-align: center;
+                background-color:  #EB0A1E;
+                font-size: 16px;
+                font-family: 'Secular One', sans-serif;
+                hr{
+                    width: 55px;
+                    height: 2px;
+                    margin-left: 120px;
+                    color: white;
+                }
+                .in{
+                    .nom{
+                       
+                        color: whitesmoke;
+                    }
+                    .position{
+                        color: whitesmoke;
+                        
+                    }
+                    .SM{
+                        
+                        a{
+                            color: whitesmoke;
+                            
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }

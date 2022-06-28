@@ -1,1 +1,23 @@
-<p>cars works!</p>
+
+<div class="car-bg">
+    <app-navbar></app-navbar>
+  <div class="filter-section">
+    <div class="input-icons">
+      <i class="fa-solid fa-magnifying-glass icon"></i>><input
+        type="text"
+        name="search"
+        id="search"
+        class="search-bar"
+      />
+    </div>
+    <button class="request-devis">Demande de devis</button>
+  </div>
+  <section class="products">
+    <div class="cars"  *ngFor="let car of carList; let i = index">
+        <img src="http://localhost:3000/{{ car.photo }}" alt="" class="car-img">
+        <h5>{{car.model}}</h5>
+        <p><span class="red">A partir de </span>{{car.price}}</p>
+    </div>
+  </section>
+  <app-footer></app-footer>
+</div>

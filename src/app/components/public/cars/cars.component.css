@@ -1,0 +1,71 @@
+.car-bg{
+    background-image: url("../../../../assets/img/bg-car.png");
+    width: 100%;
+    background-size: cover;
+}
+.filter-section{
+    margin-top: 150px;
+    margin-right: 100px;
+    padding-top: 25px ;
+    padding-left: 250px;
+}
+
+.search-bar{
+    width: 550px;
+    height: 48px;
+    margin-right: 150px;
+    border: 1px solid #EB0A1E;
+}
+
+.request-devis{
+    width: 230px;
+    height: 50px;
+    border: none;
+    text-align: center;
+    color: #EB0A1E ;
+}
+
+.input-icons i {
+    position: absolute;
+}
+ 
+.input-icons {
+    width: 100%;
+    display: inline;
+    position: relative;
+}
+ 
+.icon {
+    color: #EB0A1E;
+    min-width: 50px;
+    text-align: center;
+}
+
+.nos-produit{
+    margin-top: 400px ;
+}
+.car-img{
+    width: 450px;
+    height: 160px;
+}
+
+.cars {
+    color:white;
+    text-align: center;
+    display: inline-block;
+    width: 33%;
+    margin-top: 25px;
+}
+.cars h5{
+    margin-top: 20px;
+    font-size: 26px;
+}
+
+.cars p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.red{
+    color: #EB0A1E;
+}

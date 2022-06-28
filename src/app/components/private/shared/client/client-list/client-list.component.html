@@ -1,1 +1,88 @@
-<p>client-list works!</p>
+<div class="sb-nav-fixed">
+    <app-top-bar></app-top-bar>
+  
+    <div id="layoutSidenav">
+      <app-side-bar></app-side-bar>
+  
+      <!-- CONTENT-->
+  
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid px-4">
+            <h2 style="color: black">stock managment</h2>
+  
+            <div>
+              <button
+                type="button"
+                class="btn btn-primary mb-3"
+                data-toggle="modal"
+                data-target=".bd-example-modal-sm"
+                routerLink="/add-user">
+                + add
+              </button>
+  
+              <div
+                class="modal fade bd-example-modal-sm"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="mySmallModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">...</div>
+                </div>
+              </div>
+              <table class="fl-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>firstname</th>
+                    <th>lastname</th>
+                    <th>email</th>
+                    <th>model</th>
+                    <th>total amount</th>
+                    <th>entretient</th>
+                    <th>edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let client of clientList; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ client.firstname}}</td>
+                    <td>{{client.lastname}}</td>
+                    <td>{{client.email}}</td>
+                    <td>{{client.model}}</td>
+                    <td>{{client.total_amount}}</td>
+                    <td>{{client.entretient}}</td>
+                    <td>{{client.account}}</td>
+                    <td>
+                      <button
+                        class="btn btn-warning mx-2"
+                        [routerLink]="['/modify-client', client._id]"
+                      >
+                        <i
+                          class="fa fa-pencil"
+                          style="color: white"
+                          aria-hidden="true"
+                        ></i></button
+                      ><button
+                        class="btn btn-danger mx-2"
+                        style="color: white"
+                      (click)="delete(client._id,i)"
+                      >
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </tr> 
+                </tbody>
+  
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+  

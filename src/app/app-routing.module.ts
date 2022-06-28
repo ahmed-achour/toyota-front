@@ -22,6 +22,7 @@ import { UpdateClientComponent } from './components/private/shared/client/update
 import { UserListComponent } from './components/private/shared/user/user-list/user-list.component';
 import { AddUserComponent } from './components/private/shared/user/add-user/add-user.component';
 import { UpdateUserComponent } from './components/private/shared/user/update-user/update-user.component';
+import { ProfileComponent } from './components/private/shared/client/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -33,17 +34,26 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: "about",
+    path: "achivements",
     component: AboutUsComponent
   },
   {
-    path: "our-team",
+    path: "about",
     component: OutTeamComponent
+  },
+  {
+    path: "profile/:id",
+    component: ProfileComponent
   },
   {
     path: "dashboard",
     component: DashboardComponent
   },
+  {
+    path: "cars",
+    component: CarsComponent
+  }
+  ,
   {
     path:"user-list",
     component: UserListComponent

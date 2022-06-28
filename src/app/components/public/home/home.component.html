@@ -1,1 +1,91 @@
-<p>home works!</p>
+<div class="bg-home">
+  <app-navbar></app-navbar>
+  <section class="landing-page">
+    <div class="land">
+      <h1 class="page-title">
+        <span>Conduire</span> au-delà de toutes les attentes.
+      </h1>
+      <p>En savoir plus sur nos merveilleux produits .</p>
+    </div>
+  </section>
+  <div class="container-fluid nos-produit">
+    <section class="x">
+      <div class="desc">
+        <h1 class="title">Meilleurs Ventes</h1>
+        <div class="filter">
+          <a href="" class="link">Prix</a>
+          <a href="" class="link">semaine</a>
+          <a href="" class="link">Mois</a>
+          <a href="" class="link">Ans</a>
+          <button>Savoir plus</button>
+        </div>
+      </div>
+      <div class="row cars-items">
+        <div class="col-lg-1"><i class="fa-solid fa-arrow-left ir"></i></div>
+
+        <div class="col-lg-10">
+          <div class="d-flex flex-row">
+            <div class="cars">
+              <img
+                src="http://localhost:3000/{{ carList[0].photo }}"
+                alt=""
+                class="car-img"
+              />
+              <h5>{{ carList[0].model }}</h5>
+              <p><span class="red">A partir de </span>{{ carList[0].price }}</p>
+            </div>
+            <div class="cars">
+              <img
+                src="http://localhost:3000/{{ carList[1].photo }}"
+                alt=""
+                class="car-img"
+              />
+              <h5>{{ carList[1].model }}</h5>
+              <p><span class="red">A partir de </span>{{ carList[1].price }}</p>
+            </div>
+            <div class="cars">
+              <img
+                src="http://localhost:3000/{{ carList[2].photo }}"
+                alt=""
+                class="car-img"
+              />
+              <h5>{{ carList[2].model }}</h5>
+              <p><span class="red">A partir de </span>{{ carList[2].price }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-1"><i class="fa-solid fa-arrow-right ir"></i></div>
+      </div>
+    </section>
+    <section class="blog">
+      <div class="right-sec">
+        <div class="collection">
+          <img src="../../../../assets/img/toyo.png" alt="" />
+          <div class="red-box">
+            <div class="title-co">
+              <h1>Nouvelle Collection</h1>
+            </div>
+            <p>savoir plus<i class="fa-solid fa-arrow-right aro"></i></p>
+          </div>
+        </div>
+      </div>
+      <div class="left-sec">
+        <div class="article">
+          <img src="../../../../assets/img/lo.png" alt="" />
+          <div class="title-article">
+            <h1>
+              VENTES AUTOMOBILES : TOYOTA MET FIN À 90 ANS DE DOMINATION DE GM
+              AUX ÉTATS-UNIS
+            </h1>
+            <p>
+                En 2008, General Motors voyait son règne de numéro un mondial prendre fin alors que Toyota vendait plus de véhicules qu’elle à travers le monde. La firme japonaise mettait ainsi fin à une souveraineté de 77 ans de GM.
+            </p>
+            <span>On savoir plus..</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <app-footer></app-footer>
+</div>

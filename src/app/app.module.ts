@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddCarComponent } from './components/private/shared/cars/add-car/add-car.component';
@@ -30,6 +31,9 @@ import { OutTeamComponent } from './components/public/out-team/out-team.componen
 import { Page404Component } from './components/public/page404/page404.component';
 import { AppBarComponent } from './components/private/shared/app-bar/app-bar.component';
 import { SideBarComponent } from './components/private/shared/side-bar/side-bar.component';
+import { TopBarComponent } from './components/private/shared/top-bar/top-bar.component';
+import { ProfileComponent } from './components/private/shared/client/profile/profile.component';
+
 
 @NgModule({
   declarations: [
@@ -61,10 +65,16 @@ import { SideBarComponent } from './components/private/shared/side-bar/side-bar.
     Page404Component,
     AppBarComponent,
     SideBarComponent,
+    TopBarComponent,
+    ProfileComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

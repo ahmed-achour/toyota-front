@@ -1,0 +1,184 @@
+.bg-home{
+    background-image: url("../../../../assets/img/bg-home.png");
+    width: 100%;
+    background-size: cover;
+}
+
+.land{
+    margin-left: 150px;
+    margin-top: 150px ;
+}
+
+.page-title{
+    color: white;
+    font-size: 100px;
+    width: 60%;
+    font-weight: 900;
+
+}
+
+.page-title span{
+    color:#EB0A1E;
+}
+
+.land p{
+    color: white;
+    font-size: 64px;
+    width: 60%;
+    font-weight: 100;
+}
+
+.nos-produit{
+    color: white;
+}
+
+.nos-produit{
+    margin-top: 250px ;
+    margin-bottom: 300px;
+}
+.car-img{
+    width: 400px;
+    height: 160px;
+}
+.ir{
+    font-size: 28px;
+    font-weight: bold;
+    display: inline;
+    margin-top: 150px;
+}
+
+.cars {
+    color:white;
+    text-align: center;
+    width: 33%;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+.cars h5{
+    margin-top: 20px;
+    font-size: 26px;
+}
+
+.cars p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.red{
+    color: #EB0A1E;
+}
+.title{
+    font-weight: 900;
+    display: inline;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    margin: 10px 50px;
+    font-weight: 600;
+}
+
+.desc button{
+    color:white;
+    font-size: 16px;
+    background: none;
+    border: 1px solid #EB0A1E;
+    padding: 20px 50px;
+} 
+
+.filter{
+    float: right;
+}
+
+.cars-items{
+    margin-top: 100px;
+
+}
+.x{
+    padding: 0 50px;
+}
+.collection{
+    margin-top: 150px;
+    position: relative;
+}
+.collection img{
+    z-index: 55;
+}
+
+.red-box{
+    width: 95px;
+    height: 195px;
+    background-color: #EB0A1E;
+    position: absolute;
+    top: 100px;
+    right: 35%;
+}
+
+.red-box div h1{
+    color: white;
+    font-size: 72px;
+    font-weight: 900;
+    width: 50%;
+    position: absolute;
+    right: 15px;
+}
+
+.red-box p{
+    color: white;
+    font-size: 22px;
+    font-weight: 100;
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+}
+
+.aro{
+    color:  #EB0A1E !important;
+    font-size: 22px;
+    font-weight: 100;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.article{
+    position: relative;
+}
+
+.article img{
+    position: absolute;
+    right: 0;
+    top: -60px;
+    z-index: 0;
+    width: 40%;
+}
+
+.title-article h1{
+    width: 40%;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-align: left;
+
+}
+
+.title-article p{
+    width: 40%;
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-align: left;
+
+}
+
+.title-article span{
+    color: #EB0A1E;
+    width: 40%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-align: left;
+
+}
