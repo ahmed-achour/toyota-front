@@ -23,6 +23,8 @@ import { UserListComponent } from './components/private/shared/user/user-list/us
 import { AddUserComponent } from './components/private/shared/user/add-user/add-user.component';
 import { UpdateUserComponent } from './components/private/shared/user/update-user/update-user.component';
 import { ProfileComponent } from './components/private/shared/client/profile/profile.component';
+import { AuthGuard } from './guards/auth.guard';
+import { IsAdminGuard } from './guards/is-admin.guard';
 
 const routes: Routes = [
   {
@@ -43,76 +45,95 @@ const routes: Routes = [
   },
   {
     path: "profile/:id",
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate:[AuthGuard]
+    
   },
   {
     path: "dashboard",
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path: "cars",
     component: CarsComponent
+
   }
   ,
   {
     path:"user-list",
-    component: UserListComponent
+    component: UserListComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"add-user",
-    component: AddUserComponent
+    component: AddUserComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"update-user/:id",
-    component: UpdateUserComponent
+    component: UpdateUserComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"client-list",
-    component: ClientListComponent
+    component: ClientListComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"add-client",
-    component: AddClientComponent
+    component: AddClientComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"update-client/:id",
-    component: UpdateClientComponent
+    component: UpdateClientComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"cars-list",
-    component: CarListComponent
+    component: CarListComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"add-car",
-    component: AddCarComponent
+    component: AddCarComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"update-car/:id",
-    component: UpdateCarComponent
+    component: UpdateCarComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"stock-list",
-    component: StockListComponent
+    component: StockListComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"add-stock",
-    component: AddStockComponent
+    component: AddStockComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"update-stock/:id",
-    component: UpdateStockComponent
+    component: UpdateStockComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"user",
-    component: UserListComponent
+    component: UserListComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"add-user",
-    component: AddUserComponent
+    component: AddUserComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path:"update-user/:id",
-    component: UpdateUserComponent
+    component: UpdateUserComponent,
+    canActivate:[AuthGuard,IsAdminGuard]
   },
   {
     path: "**",

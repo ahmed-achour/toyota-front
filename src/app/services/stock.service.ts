@@ -26,8 +26,8 @@ export class StockService {
     return this.http.post<any>(this.usersUrl, stock);
   }
 
-  updateStock(stock: Stock) {
-    return this.http.patch<any>(this.usersUrl, stock);
+  updateStock(stock: Stock,id:string) {
+    return this.http.patch<any>(this.usersUrl+id, stock);
   }
 
 }

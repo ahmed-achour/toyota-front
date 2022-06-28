@@ -17,7 +17,7 @@
                 class="btn btn-primary mb-3"
                 data-toggle="modal"
                 data-target=".bd-example-modal-sm"
-                routerLink="/add-new-category">
+                routerLink="/add-car">
                 + add
               </button>
   
@@ -37,6 +37,7 @@
                   <tr>
                     <th>#</th>
                     <th>model</th>
+                    <th>car image</th>
                     <th>qr_code</th>
                     <th>price</th>
                     <th>description</th>
@@ -60,7 +61,7 @@
                     <td>
                       <button
                         class="btn btn-warning mx-2"
-                        [routerLink]="['/modify-category', car._id]"
+                        [routerLink]="['/update-car', car._id]"
                       >
                         <i
                           class="fa fa-pencil"

@@ -4,8 +4,10 @@
     background-size: cover;
 }
 .filter-section{
-    margin-top: 150px;
+    margin-top: 250px;
     margin-right: 100px;
+    margin-left: 200px;
+    margin-bottom: 100px;
     padding-top: 25px ;
     padding-left: 250px;
 }

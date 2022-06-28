@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BaseService } from './base.service';
 import { User } from '../models/user';
+import jwt_decode from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 @Injectable({
   providedIn: 'root'
 })
@@ -30,8 +32,8 @@ export class UserService {
     return this.http.post<any>(this.usersUrl, user);
   }
 
-  updateUser(user: any) {
-    return this.http.put<any>(this.usersUrl, user);
+  updateUser(user: User, id:string) {
+    return this.http.patch<any>(this.usersUrl+id, user);
   }
 
   login(user: User) {
@@ -41,11 +43,43 @@ export class UserService {
   isLoggedIn() {
 
     let token = localStorage.getItem("myToken");
-
     if (token) {
       return true;
     } else {
       return false;
     }
   }
+ 
+  isAdmin() {
+    let token = localStorage.getItem("myToken");
+    let x:any = jwt_decode(token!)
+    if(x.role=='directeur'){
+        return true;
+      }
+    else {
+      return false;
+    }
+  }
+  logout() {
+    localStorage.removeItem("myToken");
+    return true;
+}
+
+getid(){
+  let token = localStorage.getItem("myToken");
+  let x:any = jwt_decode(token!)
+  console.log(x);
+  return x;
+      
+}
+isClient(){
+  let token = localStorage.getItem('myToken')
+  let user:any = jwt_decode(token!)
+  if(user.role=="client"){
+    return true
+  } else{
+    return false
+  }
+}
+
 }

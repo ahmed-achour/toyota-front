@@ -7,9 +7,9 @@
     <div id="layoutSidenav_content">
       <main>
         <div class="container-fluid px-4 mx-3">
-          <h1 class="mt-4">trainer managment</h1>
+          <h1 class="mt-4">user managment</h1>
           <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active">add new trainer</li>
+            <li class="breadcrumb-item active">add new user</li>
           </ol>
 
           <form [formGroup]="x" (ngSubmit)="add()">
@@ -44,9 +44,7 @@
               <div class="row">
                 <div class="col-lg-6">
                   <label for="exampleFormControlFile1">role</label>
-                </div>
-                <div class="col-lg-6">
-                  <select formControlName="role" id="">
+                  <select formControlName="role" id="" class="form-select mb-2" >
                     <option value="directeur">directeur</option>
                     <option value="client">client</option>
                     <option value="role"></option>

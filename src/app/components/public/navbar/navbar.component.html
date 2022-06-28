@@ -14,6 +14,8 @@
         <a routerLink="/about" >A propos</a>
         <a routerLink="/achivements" >Achivements</a>
       </nav>
+      <a *ngIf="isClient()" routerLink="/profile/{{user.id}}"><i class='fas fa-portrait' style='font-size:48px; color: white;'></i></a>
       <div class="btn">
-      <button type="button" >Contactez-nous</button></div>
+      <button type="button" *ngIf="!isLoggedIn" routerLink="/login" >login</button>
+      <button type="button" *ngIf="isLoggedIn" (click)="logout()" routerLink="/login" >logout</button></div>
   </div>

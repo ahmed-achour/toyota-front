@@ -30,8 +30,8 @@ export class CarService {
     return this.http.post<any>(this.usersUrl, car);
   }
 
-  updateCar(car: any) {
-    return this.http.patch<any>(this.usersUrl, car);
+  updateCar(car: any, id:string) {
+    return this.http.patch<any>(this.usersUrl+id, car);
   }
 
 }
