@@ -10,16 +10,20 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class NavbarComponent implements OnInit {
   isLoggedIn: boolean=false;
-  token = localStorage.getItem('myToken')
-  user:any = jwt_decode(this.token!)
+  token:string | null =""
+  user:any
+  x: boolean = false
   
   constructor(private userService:UserService) { }
  
   ngOnInit(): void {
    this.isLoggedIn= this.userService.isLoggedIn();
-   console.log(this.user)
-   console.log(this.isLoggedIn);
-}
+   if(this.isLoggedIn == true){
+    this.token = localStorage.getItem('myToken')
+    this.user = jwt_decode(this.token!)
+    this.x= this.isClient()
+   }
+  }
 logout(){
   this.userService.logout();
 }
