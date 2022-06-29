@@ -1,1 +1,116 @@
-<p>add-client works!</p>
+<div class="sb-nav-fixed">
+    <app-top-bar></app-top-bar>
+  
+    <div id="layoutSidenav">
+      <app-side-bar></app-side-bar>
+  
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid px-4 mx-3">
+            <h1 class="mt-4">car managment</h1>
+            <ol class="breadcrumb mb-4">
+              <li class="breadcrumb-item active">add new car</li>
+            </ol>
+  
+            <form [formGroup]="myForm" (ngSubmit)="add()">
+              <div class="form-group text-center">
+                <img
+                  [src]="imageUrl"
+                  class="image-fluid category-image"
+                  alt=""
+                  style="width: 150px"
+                />
+                <input
+                  type="file"
+                  class="form-control upload-input"
+                  (change)="save($event)"
+                  id="customFile"
+                />
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-lg-6 my-2">
+                    <label for="exampleFormControlFile1">firstname : </label>
+                  </div>
+                  <div class="col-lg-6 my-2">
+                    <label for="exampleFormControlFile1">lastname :</label>
+                  </div>
+                  <div class="col-lg-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="firstname"
+                      id="firstname"
+                    />
+                  </div>
+                  <div class="col-lg-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="lastname"
+                      id="lastname"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group mt-2"></div>
+  
+              <div class="form-group mb-3">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label for="exampleFormControlFile1" class="mb-2"
+                      >email :</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="email"
+                      id="email"
+                    />
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="exampleFormControlFile1">model</label>
+                  <select formControlName="model" id="" class="form-select mb-2" >
+                    <option *ngFor="let car of carList" value="{{car.model}}">{{car.model}}</option>
+                  </select>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="exampleFormControlFile1">user account</label>
+                  <select formControlName="account" id="" class="form-select mb-2">
+                    <option  *ngFor="let user of userList" value="{{user._id}}">{{user.username}}</option>
+                  </select>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="exampleFormControlFile1" class="mb-2"
+                      >total_amount :</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="total_amount"
+                      id="total_amount"
+                    />
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="exampleFormControlFile1" class="mb-2"
+                      >entretient :</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="entretient"
+                      id="entretient"
+                    />
+                  </div>
+                </div>
+              </div>
+  
+              <button class="btn btn-primary" type="submit">add</button>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+  

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BaseService } from './base.service';
 import { User } from '../models/user';
 import jwt_decode from 'jwt-decode';
-import jwtDecode from 'jwt-decode';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,13 +11,14 @@ export class UserService {
 
   private usersUrl = `${BaseService.baseUrl}/users/`
 
+
   constructor(private http: HttpClient) { }
 
 
 
 
   getAllUsers() {
-    return this.http.get<any>(this.usersUrl);
+    return this.http.get<any>("http://localhost:3000/users/");
   }
 
   getOneUser(id: String) {

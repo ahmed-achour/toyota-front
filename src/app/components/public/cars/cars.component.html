@@ -13,10 +13,13 @@
     <button class="request-devis">Demande de devis</button>
   </div>
   <section class="products">
-    <div class="cars"  *ngFor="let car of carList; let i = index">
+    <div class="cars"  *ngFor="let car of carList; let i = index" >
+      <a href="{{car.description}}" style="text-decoration: none; color:white;">
         <img src="http://localhost:3000/{{ car.photo }}" alt="" class="car-img">
         <h5>{{car.model}}</h5>
         <p><span class="red">A partir de </span>{{car.price}}</p>
+      </a>
+
     </div>
   </section>
   <app-footer></app-footer>
